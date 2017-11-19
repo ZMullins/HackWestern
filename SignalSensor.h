@@ -82,13 +82,13 @@ bool lightRead(const int &ldrPin, int sigReturn[], int senseVal) {
       }
 
       fin = receivedVal;
-      sigReturn[place] = receivedVal;
-      Serial.println(sigReturn[place]);
       if (fin == 0) {
         notDone = false;
-        Serial.println("zero");
+        break;
       }
-      //Serial.println(fin);
+        sigReturn[place] = receivedVal;
+
+      Serial.println(fin);
       receivedVal = 0;
       place++;
       x = 0;
