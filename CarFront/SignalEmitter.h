@@ -27,7 +27,6 @@ bool sigSend(int number,int delayVal,int highVal, const int laserPin) {
       break;
     }
     numberArr[i] = temp;
-    Serial.println(numberArr[i]);
   }
 
 //  //Reverse
@@ -57,7 +56,7 @@ bool sigSend(int number,int delayVal,int highVal, const int laserPin) {
 
   int j = 0;
   while (j<sizeArr) {
-    Serial.println(numberArr[j]);
+    //Serial.println(numberArr[j]);
     boxVal = numberArr[j];
     j++;
     //Sender

@@ -29,7 +29,7 @@ void loop() {
   } else {
 
     //Second Car Count Output
-    sigSend(523,50,255,laserPin);
+    sigSend(523,100,255,laserPin);
   }
 
 }
