@@ -5,8 +5,10 @@ int x = 0;
 int ldr = 2;
 int receivedVal = 0;
 bool notDone = 1;
+int senseVal;
+int place=0;
 
-int[27] lightRead(const int ldrPin, int[27] sigReturn, int senseVal) {
+bool lightRead(const int &ldrPin, int sigReturn[], int senseVal) {
 
   boolean cal[3] = {0, 0, 0};
   boolean received[3] = {0, 0, 0};
@@ -81,16 +83,18 @@ int[27] lightRead(const int ldrPin, int[27] sigReturn, int senseVal) {
 
       fin = receivedVal;
       sigReturn[place] = receivedVal;
-      if (fin = -0) {
+      Serial.println(sigReturn[place]);
+      if (fin == 0) {
         notDone = false;
+        Serial.println("zero");
       }
-      Serial.println(fin);
+      //Serial.println(fin);
       receivedVal = 0;
       place++;
       x = 0;
     }
     delay (50);
   }
-return sigReturn[];
+return true;
 }
 
